@@ -21,15 +21,15 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="16x16" src="../public/favicon16x16.png" />
       </Head>
 
-      <main className="xxs:bg-slate-100 bg-slate-200 px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      <main className="bg-slate-200 px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className='min-h-screen'>
-          <nav className='p-10 xxs:p-6 xxs:mb-4 mb-12 flex justify-between'>
+          <nav className='p-10 mb-12 flex justify-between'>
             <h1 className='text-teal-500 text-xl font-burtons '>Noley_Dev</h1>
-            <ul className='flex items-center xxs:grid xxs:grid-rows-1'>
+            <ul className='flex items-center'>
               <li>
                 <a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="/resume">Resume</a>
               </li>
-              <li className="xxs:mt-4" >{ darkMode ? <BsFillSunFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl fill-yellow-200"/> : <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl fill-indigo-900"/> } </li>
+              <li className="ml-6" >{ darkMode ? <BsFillSunFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl fill-yellow-200"/> : <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl fill-indigo-900"/> } </li>
               
             </ul>
           </nav>

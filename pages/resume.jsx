@@ -15,12 +15,12 @@ const resume = () => {
         <link rel="icon" type="image/png" sizes="32x32" src="../public/favicon32x32a.png" />
         <link rel="icon" type="image/png" sizes="16x16" src="../public/favicon16x16.png" />
       </Head>
-      <div className="font-mono border-[16px] border-slate-400 bg-gray-50 h-max mb-0 p-0 flex-row">
-<button className="absolute top-5 left-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><a href="/#">Portfolio</a></button>
+      <div className="font-mono border-[16px] xxs:border-[8px]  border-slate-400 bg-gray-50 h-max mb-0 p-0 flex-row">
+<button className="xxs:relative xxs:left-0 xxs:top-0 xxs:rounded-none absolute top-5 left-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><a href="/#">Portfolio</a></button>
 
-           <div className="flex flex-col items-center">        
+           <div className="xxs:grid xxs:grid-row-1 xxs:ml-[25%] flex flex-col items-center">        
              <div className="flex flex-row h-[50px] font-bold mt-6">
-             <h1 className="mr-8 mt-2 text-[24px]">Nolan</h1><Image src={resumeasset} height={100} width={50} /><h1 className="ml-6 mt-2 text-[24px]">Geiger</h1>
+             <h1 className="xxs:mr-1 mr-8 mt-2 text-[24px]">Nolan</h1><Image className="order-last" src={resumeasset} height={100} width={50} /><h1 className="xxs:ml-1 ml-6 mt-2 text-[24px]">Geiger</h1>
           </div> 
                  
          </div>  
