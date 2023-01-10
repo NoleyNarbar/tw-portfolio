@@ -7,36 +7,31 @@ import NolanDarkBig from '../public/NolanDarkBig.png';
 import frontenddevelopment from "../public/frontenddevelopment.svg";
 import databasebackend from "../public/databasebackend.svg";
 import studyinglaptop from "../public/studyinglaptop.svg";
-
 import React, { useState, useEffect } from 'react';
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+
+const boxVariant = {
+  visible: { opacity: 1, scale: 1, transition: { duration: 2 } },
+  hidden: { opacity: 0, scale: 0}
+};
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+ 
 
   useEffect(() => {
-    const targets = document.querySelectorAll(".js-show-on-scroll");
-  
-    const callback = function(entries) {
-      entries.forEach(entry => {
-        // Is the element in the viewport?
-        if(entry.isIntersecting) {
-          entry.target.classList.add("motion-safe:animate-fadeIn")
-        } else {
-          entry.target.classList.remove("motion-safe:animate-fadeIn");
-        }
-      })
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
     }
-    
-    const observer = new IntersectionObserver(callback);
-  
-    targets.forEach(function(target) {
-      target.classList.add("opacity-0");
-      observer.observe(target);
-    })
-  }, []);
-  
+  }, [control, inView]);
 
-  
+ 
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -110,6 +105,13 @@ export default function Home() {
               <p className="text-gray-800 dark:text-indigo-900 py-1">&#x2022; Tailwind CSS</p>
               
             </div>
+            <motion.div
+        ref={ref}
+        className="box"
+        variants={boxVariant}
+        initial="hidden"
+        animate={control}
+      >
             <div className="bg-gray-50 drop-shadow-xl text-center shadow-xl p-10 rounded-xl my-10 dark:bg-white flex-1">
               <Image src={databasebackend} width={130} height={130} className="mx-auto my-2.5" />
               <h3 className="text-lg font-bold dark:text-purple-900  pt-8 pb-2">
@@ -124,6 +126,8 @@ export default function Home() {
               <p className="text-gray-800 py-1 dark:text-indigo-900">&#x2022; Express</p>
               <p className="text-gray-800 py-1 dark:text-indigo-900">&#x2022; Sanity.io <br/>(headless CMS)</p>
             </div>
+            </motion.div>
+
             <div className="bg-gray-50 drop-shadow-xl text-center shadow-xl p-10 rounded-xl my-10 dark:bg-white flex-1">
             <Image src={studyinglaptop} width={130} height={130} className="mx-auto my-2.5" />
 
