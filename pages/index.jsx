@@ -29,6 +29,9 @@ export default function Home() {
               <li>
                 <a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="/resume">Resume</a>
               </li>
+              <li>
+                <a className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8" href="#projects">Projects</a>
+              </li>
               <li className="ml-6" >{ darkMode ? <BsFillSunFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl fill-yellow-200"/> : <BsFillMoonStarsFill onClick={() => setDarkMode(!darkMode)} className="cursor-pointer text-2xl fill-indigo-900"/> } </li>
               
             </ul>
@@ -112,10 +115,9 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Current Projects</h3>
 
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
+            <p id="projects" className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Coming soon! Please check my github to look at code of <span className="text-teal-500"> projects </span> 
               that will be displayed here soon.
-              
             </p>
           
           </div>
