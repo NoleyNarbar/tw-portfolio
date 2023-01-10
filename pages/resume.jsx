@@ -16,7 +16,7 @@ const resume = () => {
         <link rel="icon" type="image/png" sizes="16x16" src="../public/favicon16x16.png" />
       </Head>
       <div className="w-full font-mono border-[16px] border-slate-400 bg-gray-50 mb-0 p-0 ">
-<button className="xxs:relative xxs:left-0 xxs:top-0 xxs:rounded-none absolute top-5 left-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><a href="/#"> &laquo; Portfolio</a></button>
+<button className="xs:relative xs:left-0 xs:top-0 xs:rounded-none absolute top-5 left-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"><a href="/#"> &laquo; Portfolio</a></button>
            <div className=" flex flex-col items-center">        
              <div className="flex flex-row h-[50px] font-bold mt-6">
              <h1 className="mr-8 mt-2 text-[24px]">Nolan</h1><Image className="" src={resumeasset} 
